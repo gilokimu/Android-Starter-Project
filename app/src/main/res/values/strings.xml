@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Starter</string>
+
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_sign_in">Home</string>
+    <string name="title_activity_sign_up">Home</string>
+
+    <string name="font_bold">fonts/GT-America-Bold.otf</string>
+    <string name="font_medium">fonts/GT-America-Medium.otf</string>
+    <string name="font_regular">fonts/GT-America-Regular.otf</string>
+    <string name="font_light">fonts/GT-America-Thin.otf</string>
+    <string name="font_italic">fonts/GT-America-Regular-Italic.otf</string>
+
 </resources>

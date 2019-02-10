@@ -6,6 +6,7 @@
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
+            android:name=".StarterApp"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
@@ -16,6 +17,26 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+                android:name=".ui.home.HomeActivity"
+                android:label="@string/title_activity_home"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+                android:name=".ui.user.onboarding.SignInActivity"
+                android:label="@string/title_activity_sign_in"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+                android:name=".ui.user.onboarding.SignUpActivity"
+                android:label="@string/title_activity_sign_up"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+
+
+
+
     </application>
 
 </manifest>
