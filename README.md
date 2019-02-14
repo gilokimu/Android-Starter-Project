@@ -3,6 +3,7 @@ This is an android project template that I use in all new android projects
 
 
 ##Checklist
+Trello board here - https://trello.com/b/lYzZ08de/android-starter-project
 This is a least of components to implement, drawn from the most common components appearing across all apps I build
 
 - [x] MVVM
