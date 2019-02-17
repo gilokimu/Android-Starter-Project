@@ -8,40 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:204600793177:android:c78999356d4cf9b9",
+        "mobilesdk_app_id": "1:204600793177:android:7b70db47d97824c0",
         "android_client_info": {
           "package_name": "me.gilo.starter"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "204600793177-ph90604ltl5i1rndtqbacjred5tt9kfo.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBXzQa5rQ_zidb7WR0_BgTPlV6JDmHwM-s"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:204600793177:android:1edca20303547f2a",
-        "android_client_info": {
-          "package_name": "me.gilo.wallet"
         }
       },
       "oauth_client": [
