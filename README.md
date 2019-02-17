@@ -25,7 +25,7 @@ Watch this video for steps 3, 4, 5 https://www.youtube.com/watch?v=EEDRt2X-Q90
 
 
 
-##Checklist
+## Checklist
 Trello board here - https://trello.com/b/lYzZ08de/android-starter-project
 This is a least of components to implement, drawn from the most common components appearing across all apps I build
 
