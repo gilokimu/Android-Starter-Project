@@ -1,7 +1,7 @@
 package me.gilo.starter.viewmodels;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -10,8 +10,8 @@ import me.gilo.starter.common.CallBackLiveData;
 import me.gilo.starter.common.CompletionGenericLiveData;
 import me.gilo.starter.common.CompletionLiveData;
 import me.gilo.starter.common.DocumentLiveData;
-import me.gilo.starter.data.response.LoginResponse;
 import me.gilo.starter.data.response.ApiResponse;
+import me.gilo.starter.data.response.LoginResponse;
 import me.gilo.starter.models.User;
 import me.gilo.starter.repo.FirebaseRepository;
 import me.gilo.starter.repo.UserRepository;

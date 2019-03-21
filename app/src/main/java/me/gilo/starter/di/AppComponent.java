@@ -1,14 +1,13 @@
 package me.gilo.starter.di;
 
 
-import me.gilo.starter.StarterApp;
-
-import javax.inject.Singleton;
-
 import dagger.Component;
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
+import me.gilo.starter.StarterApp;
+
+import javax.inject.Singleton;
 
 
 @Singleton

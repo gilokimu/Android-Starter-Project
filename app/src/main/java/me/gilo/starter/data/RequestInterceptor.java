@@ -1,14 +1,13 @@
 package me.gilo.starter.data;
 
-import me.gilo.starter.StarterApp;
 import me.gilo.starter.Config;
+import me.gilo.starter.StarterApp;
 import me.gilo.starter.utils.AppUtils;
-
-import java.io.IOException;
-
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
+
+import java.io.IOException;
 
 public class RequestInterceptor implements Interceptor {
 

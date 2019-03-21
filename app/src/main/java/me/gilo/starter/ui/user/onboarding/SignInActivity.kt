@@ -1,10 +1,11 @@
 package me.gilo.starter.ui.user.onboarding
 
-import android.arch.lifecycle.Observer
+
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.content_sign_in.*
 import me.gilo.starter.R
@@ -12,8 +13,8 @@ import me.gilo.starter.common.BaseActivity
 import me.gilo.starter.common.Status
 import me.gilo.starter.ui.home.HomeActivity
 import me.gilo.starter.ui.state.ProgressDialogFragment
-import me.gilo.starter.viewmodels.UserViewModel
 import me.gilo.starter.utils.AppUtils
+import me.gilo.starter.viewmodels.UserViewModel
 import org.json.JSONObject
 import java.util.regex.Matcher
 import java.util.regex.Pattern

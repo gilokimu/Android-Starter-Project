@@ -20,11 +20,10 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
-import java.util.Map;
-
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.inject.Singleton;
+import java.util.Map;
 
 @Singleton
 public class ViewModelFactory implements ViewModelProvider.Factory {

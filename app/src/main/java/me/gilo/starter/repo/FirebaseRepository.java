@@ -1,9 +1,5 @@
 package me.gilo.starter.repo;
 
-import me.gilo.starter.common.CompletionGenericLiveData;
-import me.gilo.starter.common.CompletionLiveData;
-import me.gilo.starter.common.DocumentLiveData;
-import me.gilo.starter.models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -11,6 +7,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.StorageReference;
+import me.gilo.starter.common.CompletionGenericLiveData;
+import me.gilo.starter.common.CompletionLiveData;
+import me.gilo.starter.common.DocumentLiveData;
+import me.gilo.starter.models.User;
 
 import javax.inject.Inject;
 import javax.inject.Named;

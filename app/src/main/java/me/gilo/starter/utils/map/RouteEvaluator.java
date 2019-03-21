@@ -1,7 +1,6 @@
 package me.gilo.starter.utils.map;
 
 import android.animation.TypeEvaluator;
-
 import com.google.android.gms.maps.model.LatLng;
 
 /**

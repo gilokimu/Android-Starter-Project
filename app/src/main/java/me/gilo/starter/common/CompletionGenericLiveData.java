@@ -2,7 +2,6 @@ package me.gilo.starter.common;
 
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 

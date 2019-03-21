@@ -2,9 +2,6 @@ package me.gilo.starter.repo;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
-
-import me.gilo.starter.models.Identifiable;
-import me.gilo.starter.models.Repository;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -12,6 +9,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import me.gilo.starter.models.Identifiable;
+import me.gilo.starter.models.Repository;
 
 /**
  * Manages data access for Firebase

@@ -2,13 +2,12 @@ package me.gilo.starter.ui.home
 
 import android.content.Context
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.activity_home.*
 import me.gilo.starter.R
 import me.gilo.starter.common.BaseActivity
-import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class HomeActivity : BaseActivity() {
 

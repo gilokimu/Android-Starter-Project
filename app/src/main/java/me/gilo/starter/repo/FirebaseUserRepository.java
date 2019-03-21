@@ -12,7 +12,6 @@ import me.gilo.starter.common.CompletionLiveData;
 import me.gilo.starter.common.DocumentLiveData;
 import me.gilo.starter.models.User;
 
-
 import javax.inject.Inject;
 import javax.inject.Named;
 
