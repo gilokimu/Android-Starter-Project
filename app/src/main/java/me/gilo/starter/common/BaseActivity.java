@@ -3,10 +3,10 @@ package me.gilo.starter.common;
 import android.annotation.SuppressLint;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
 
 import javax.inject.Inject;
 
+import androidx.lifecycle.ViewModelProviders;
 import dagger.android.support.DaggerAppCompatActivity;
 
 
