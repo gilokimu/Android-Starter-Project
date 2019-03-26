@@ -4,8 +4,8 @@ import me.gilo.starter.common.CallBackLiveData;
 import me.gilo.starter.data.API;
 import me.gilo.starter.data.RestAdapter;
 import me.gilo.starter.data.body.LoginBody;
-import me.gilo.starter.data.response.LoginResponse;
 import me.gilo.starter.data.response.ApiResponse;
+import me.gilo.starter.data.response.LoginResponse;
 import me.gilo.starter.models.User;
 
 import javax.inject.Inject;

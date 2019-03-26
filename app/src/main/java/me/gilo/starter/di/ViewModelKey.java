@@ -1,14 +1,10 @@
 package me.gilo.starter.di;
 
-import android.arch.lifecycle.ViewModel;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
+import androidx.lifecycle.ViewModel;
 import dagger.MapKey;
+
+import java.lang.annotation.*;
 
 @Documented
 @Target({ElementType.METHOD})

@@ -1,17 +1,11 @@
 package me.gilo.starter.common;
 
-import android.arch.lifecycle.LiveData;
-import android.util.Log;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-
-import org.json.JSONObject;
-
-import java.io.IOException;
-
+import androidx.lifecycle.LiveData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import java.io.IOException;
 
 public class CallBackLiveData<T> extends LiveData<Resource<T>> implements Callback<T> {
 

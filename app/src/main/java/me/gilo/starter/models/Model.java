@@ -1,12 +1,11 @@
 package me.gilo.starter.models;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
-
-import me.gilo.starter.utils.DateUtils;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.PrimaryKey;
 import com.google.firebase.firestore.IgnoreExtraProperties;
 import com.google.firebase.firestore.ServerTimestamp;
+import me.gilo.starter.utils.DateUtils;
 
 import java.io.Serializable;
 import java.util.Date;

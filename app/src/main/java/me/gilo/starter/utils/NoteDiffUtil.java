@@ -1,7 +1,8 @@
 package me.gilo.starter.utils;
 
-import android.support.annotation.Nullable;
-import android.support.v7.util.DiffUtil;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DiffUtil;
 import me.gilo.starter.models.Note;
 
 import java.util.List;

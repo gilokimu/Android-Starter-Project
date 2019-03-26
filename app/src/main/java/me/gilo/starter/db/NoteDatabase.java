@@ -1,7 +1,8 @@
 package me.gilo.starter.db;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.RoomDatabase;
+
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
 import me.gilo.starter.dao.DaoAccess;
 import me.gilo.starter.models.Note;
 

@@ -1,6 +1,7 @@
 package me.gilo.starter.common;
 
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by amrro <amr.elghobary@gmail.com> on 9/15/17.

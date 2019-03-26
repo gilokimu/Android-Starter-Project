@@ -1,12 +1,8 @@
 package me.gilo.starter.common;
 
-import android.arch.lifecycle.LiveData;
 
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.ListenerRegistration;
+import androidx.lifecycle.LiveData;
+import com.google.firebase.firestore.*;
 
 
 public class DocumentLiveData<T> extends LiveData<Resource<T>>

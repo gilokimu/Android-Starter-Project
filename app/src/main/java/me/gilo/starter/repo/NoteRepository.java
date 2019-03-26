@@ -1,12 +1,14 @@
 package me.gilo.starter.repo;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.persistence.room.Room;
+
 import android.content.Context;
 import android.os.AsyncTask;
+import androidx.lifecycle.LiveData;
+import androidx.room.Room;
 import me.gilo.starter.db.NoteDatabase;
 import me.gilo.starter.models.Note;
 import me.gilo.starter.utils.AppUtils;
+
 import java.util.List;
 
 public class NoteRepository {

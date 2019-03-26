@@ -1,10 +1,10 @@
 package me.gilo.starter.ui.home
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import me.gilo.starter.R
 import me.gilo.starter.viewmodels.UserViewModel
 

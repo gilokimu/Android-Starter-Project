@@ -1,16 +1,9 @@
 package me.gilo.starter.common;
 
-import android.arch.lifecycle.LiveData;
-import android.support.annotation.NonNull;
-
-
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import com.google.firebase.firestore.*;
 import me.gilo.starter.models.Model;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
