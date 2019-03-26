@@ -1,7 +1,7 @@
 package me.gilo.starter.dao;
 
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import androidx.room.*;
 import me.gilo.starter.models.Note;
 

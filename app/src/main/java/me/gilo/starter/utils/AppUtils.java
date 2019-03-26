@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.support.annotation.StringRes;
 import android.util.Base64;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
+import androidx.annotation.StringRes;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

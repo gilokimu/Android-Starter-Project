@@ -10,6 +10,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -92,6 +93,7 @@ dependencies {
     // Android architecture components
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0-rc01"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
     implementation "androidx.paging:paging-runtime:2.0.0-rc01"
 
     // Room components
@@ -107,15 +109,11 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
 
     // Third-party libraries
-    implementation 'com.github.bumptech.glide:glide:4.5.0'
-    implementation 'com.jakewharton.timber:timber:4.6.0'
-
     implementation 'net.danlew:android.joda:2.9.9.4'
 
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-
-    implementation 'com.jakewharton.retrofit:retrofit1-okhttp3-client:1.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 
     implementation 'io.reactivex:rxandroid:1.2.1'
     implementation 'io.reactivex:rxjava:1.3.0'
@@ -125,7 +123,7 @@ dependencies {
 
 
     implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
+
 
 
 }
