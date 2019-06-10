@@ -1,5 +1,6 @@
 package me.gilo.starter.di
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import me.gilo.starter.StarterApp
@@ -7,18 +8,12 @@ import me.gilo.starter.StarterApp
 import javax.inject.Singleton
 
 @Module
-class AppModule {
+class AppModule(val context: Context) {
 
-    internal lateinit var app: StarterApp
-
-    internal fun AppModule(application: StarterApp) {
-        app = application
-    }
 
     @Provides
-    @Singleton
-    internal fun providesApplication(): StarterApp {
-        return app
+    fun context(): Context {
+        return context
     }
 
 }

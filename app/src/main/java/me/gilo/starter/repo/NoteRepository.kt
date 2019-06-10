@@ -4,15 +4,16 @@ import android.content.Context
 import me.gilo.core.entity.Note
 import me.gilo.core.repositories.NoteRepository
 import me.gilo.localdataprovider.repository.RoomNoteRepository
+import javax.inject.Inject
 
 
-class AppNoteRepository(context: Context) : NoteRepository {
+class AppNoteRepository
+@Inject constructor() : NoteRepository{
 
-    private val noteRepository : NoteRepository
 
-    init {
-        noteRepository = RoomNoteRepository(context)
-    }
+    @Inject
+    lateinit var noteRepository : NoteRepository
+
 
     override fun add(note: Note) {
         noteRepository.add(note)

@@ -7,6 +7,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import me.gilo.starter.utils.ViewModelFactory
+import me.gilo.starter.viewmodels.NoteViewModel
 import me.gilo.starter.viewmodels.UserViewModel
 
 
@@ -17,6 +18,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(UserViewModel::class)
     internal abstract fun bindUserViewModel(viewModel: UserViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(NoteViewModel::class)
+    internal abstract fun bindNoteViewModel(viewModel: NoteViewModel): ViewModel
 
     @Binds
     internal abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory

@@ -1,11 +1,11 @@
 package me.gilo.starter
 
-import android.content.Context
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 import io.github.inflationx.calligraphy3.CalligraphyConfig
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
+import me.gilo.starter.di.AppModule
 import me.gilo.starter.di.DaggerAppComponent
 
 class StarterApp : DaggerApplication() {
@@ -30,6 +30,8 @@ class StarterApp : DaggerApplication() {
     }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        return DaggerAppComponent.create()
+        return DaggerAppComponent.builder()
+            .appModule(AppModule(baseContext))
+            .build()
     }
 }

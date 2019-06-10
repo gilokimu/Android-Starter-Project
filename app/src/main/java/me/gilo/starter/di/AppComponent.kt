@@ -11,7 +11,14 @@ import javax.inject.Singleton
 
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, ViewModelModule::class, FirebaseModule::class, ActivitiesModule::class])
+@Component(modules = [
+    AndroidSupportInjectionModule::class,
+    ViewModelModule::class,
+    FirebaseModule::class,
+    ActivitiesModule::class,
+    AppModule::class,
+    RepositoryModule::class
+])
 internal interface AppComponent : AndroidInjector<DaggerApplication> {
 
     fun inject(app: StarterApp)
