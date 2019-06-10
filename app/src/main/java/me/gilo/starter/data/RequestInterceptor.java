@@ -54,7 +54,7 @@ public class RequestInterceptor implements Interceptor {
     }
 
     public String getBearer() {
-        return (new AppUtils(StarterApp.getContext())).getToken();
+        return "";
     }
 
     public void setBearer(String bearer) {
@@ -62,7 +62,7 @@ public class RequestInterceptor implements Interceptor {
     }
 
     public boolean isAuthenticated() {
-        return (new AppUtils(StarterApp.getContext())).isLoggedIn();
+        return true;
     }
 
     public void setAuthenticated(boolean authenticated) {
