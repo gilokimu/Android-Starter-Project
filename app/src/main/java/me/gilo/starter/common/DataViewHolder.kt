@@ -14,21 +14,14 @@
  * limitations under the License.
  */
 
-package me.gilo.starter.common;
+package me.gilo.starter.common
 
-import androidx.databinding.ViewDataBinding;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.RecyclerView
 
 /**
- * A generic ViewHolder that works with a {@link ViewDataBinding}.
+ * A generic ViewHolder that works with a [ViewDataBinding].
  *
  * @param <T> The type of the ViewDataBinding.
- */
-class DataViewHolder<T extends ViewDataBinding> extends RecyclerView.ViewHolder {
-    final T binding;
-
-    DataViewHolder(T binding) {
-        super(binding.getRoot());
-        this.binding = binding;
-    }
-}
+</T> */
+class DataViewHolder<T : ViewDataBinding>(val binding: T) : RecyclerView.ViewHolder(binding.root)
