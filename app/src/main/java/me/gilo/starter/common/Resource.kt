@@ -36,18 +36,18 @@ class Resource<T> private constructor(private val data: T?, private val error: E
         }
     }
 
-    fun data(): T? {
+    fun data(): T {
         if (error != null) {
             throw IllegalStateException("error is not null. Call isSuccessful() first.")
         }
-        return data
+        return data!!
     }
 
-    fun error(): Exception? {
+    fun error(): Exception {
         if (data != null) {
             throw IllegalStateException("data is not null. Call isSuccessful() first.")
         }
-        return error
+        return error!!
     }
 
     fun status(): Status {
