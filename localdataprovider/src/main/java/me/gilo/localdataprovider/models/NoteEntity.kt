@@ -6,12 +6,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import me.gilo.core.entity.Note
-import me.gilo.localdataprovider.utils.TimestampConverter
-
-
-import java.io.Serializable
-import java.util.Date
-import kotlin.concurrent.timerTask
+import me.gilo.localdataprovider.utils.Converters
+import java.util.*
 
 @Entity
 data class NoteEntity (
@@ -24,11 +20,11 @@ data class NoteEntity (
     var description: String? = null,
 
     @ColumnInfo(name = "created_at")
-    @TypeConverters(TimestampConverter::class)
+    @TypeConverters(Converters::class)
     var createdAt: Date? = null,
 
     @ColumnInfo(name = "modified_at")
-    @TypeConverters(TimestampConverter::class)
+    @TypeConverters(Converters::class)
     var modifiedAt: Date? = null,
 
     var isEncrypt: Boolean = false,

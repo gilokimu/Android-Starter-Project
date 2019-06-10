@@ -3,7 +3,9 @@ package me.gilo.starter.di
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import me.gilo.starter.MainActivity
+import me.gilo.starter.ui.StarterActivity
 import me.gilo.starter.ui.home.HomeActivity
+import me.gilo.starter.ui.note.AddNoteActivity
 import me.gilo.starter.ui.user.onboarding.SignInActivity
 import me.gilo.starter.ui.user.onboarding.SignUpActivity
 
@@ -28,5 +30,8 @@ internal abstract class ActivitiesModule {
 
     @ContributesAndroidInjector
     internal abstract fun contributesSignUpActivity(): SignUpActivity
+
+    @ContributesAndroidInjector
+    internal abstract fun contributesAddNoteUpActivity(): AddNoteActivity
 
 }

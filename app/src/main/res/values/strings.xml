@@ -10,5 +10,6 @@
     <string name="font_regular">fonts/GT-America-Regular.otf</string>
     <string name="font_light">fonts/GT-America-Thin.otf</string>
     <string name="font_italic">fonts/GT-America-Regular-Italic.otf</string>
+    <string name="title_activity_add_note">AddNoteActivity</string>
 
 </resources>

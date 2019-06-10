@@ -1,11 +1,16 @@
 package me.gilo.starter.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_add_note.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import me.gilo.starter.R
+import me.gilo.starter.ui.note.AddNoteActivity
 import me.gilo.starter.viewmodels.UserViewModel
 
 
@@ -33,6 +38,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        fab.setOnClickListener{activity?.startActivity(Intent(activity, AddNoteActivity::class.java))}
 
     }
 

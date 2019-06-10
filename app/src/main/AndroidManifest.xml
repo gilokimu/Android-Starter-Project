@@ -3,13 +3,18 @@
           package="me.gilo.starter">
 
     <application
+            android:name=".StarterApp"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
-            android:name=".StarterApp"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity
+                android:name=".ui.note.AddNoteActivity"
+                android:label="@string/title_activity_add_note"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -17,26 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity
                 android:name=".ui.home.HomeActivity"
                 android:label="@string/title_activity_home"
-                android:theme="@style/AppTheme.NoActionBar" />
-
+                android:theme="@style/AppTheme.NoActionBar"/>
         <activity
                 android:name=".ui.user.onboarding.SignInActivity"
                 android:label="@string/title_activity_sign_in"
-                android:theme="@style/AppTheme.NoActionBar" />
-
+                android:theme="@style/AppTheme.NoActionBar"/>
         <activity
                 android:name=".ui.user.onboarding.SignUpActivity"
                 android:label="@string/title_activity_sign_up"
-                android:theme="@style/AppTheme.NoActionBar" />
-
-
-
-
-
+                android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

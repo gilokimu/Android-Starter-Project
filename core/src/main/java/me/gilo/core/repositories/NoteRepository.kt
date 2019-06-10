@@ -7,6 +7,6 @@ interface NoteRepository{
     fun update(note: Note)
     fun delete(id: Int)
     fun delete(note: Note)
-    fun note(id: Int): Note
-    fun notes(): List<Note>
+    fun note(id: Int): Note?
+    fun notes(): List<Note>?
 }

@@ -31,7 +31,7 @@ class AppNoteRepository
         noteRepository.delete(note)
     }
 
-    override fun note(id: Int): Note = noteRepository.note(id)
+    override fun note(id: Int) = noteRepository.note(id)
 
-    override fun notes(): List<Note> = noteRepository.notes()
+    override fun notes() = noteRepository.notes()
 }

@@ -12,14 +12,14 @@ import me.gilo.localdataprovider.models.toNote
 import me.gilo.localdataprovider.models.toNoteEntity
 import me.gilo.localdataprovider.tasks.AsyncExecutor
 import me.gilo.localdataprovider.utils.AppUtils
+import net.danlew.android.joda.JodaTimeAndroid.init
 
-class RoomNoteRepository(context: Context) : NoteRepository {
-
+class RoomNoteRepository: NoteRepository{
 
     private val DB_NAME = "db_task"
     private val noteDatabase: NoteDatabase
 
-    init {
+    constructor(context: Context) {
         noteDatabase = Room.databaseBuilder(context, NoteDatabase::class.java, DB_NAME).build()
     }
 
@@ -52,19 +52,19 @@ class RoomNoteRepository(context: Context) : NoteRepository {
 
     override fun delete(id: Int) {
         val task = note(id)
-        AsyncExecutor().execute(noteDatabase.daoAccess().deleteTask(task.toNoteEntity()))
+        AsyncExecutor().execute(noteDatabase.daoAccess().deleteTask(task!!.toNoteEntity()))
     }
 
     override fun delete(note: Note) {
         AsyncExecutor().execute(noteDatabase.daoAccess().deleteTask(note.toNoteEntity()))
     }
 
-    override fun note(id: Int): Note {
-        return noteDatabase.daoAccess().getTask(id).value!!.toNote()
+    override fun note(id: Int): Note? {
+        return noteDatabase.daoAccess().getTask(id).value?.toNote()
     }
 
-    override fun notes(): List<Note> {
-        return noteDatabase.daoAccess().fetchAllTasks().value!!.map { noteEntity -> noteEntity.toNote() }
+    override fun notes(): List<Note>? {
+        return noteDatabase.daoAccess().fetchAllTasks().value?.map { noteEntity -> noteEntity.toNote() }
     }
 }
 

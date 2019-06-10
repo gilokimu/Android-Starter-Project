@@ -1,5 +1,6 @@
 package me.gilo.starter.viewmodels
 
+import android.util.EventLogTags
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.tasks.OnFailureListener
@@ -30,6 +31,11 @@ internal constructor(private val noteRepository: AppNoteRepository) : ViewModel(
         noteRepository.add(note)
     }
 
+    fun add(title : String, description : String) {
+        var note = Note(title = title, description = description)
+        noteRepository.add(note)
+    }
+
     fun update(note: Note) {
         noteRepository.update(note)
     }
@@ -42,8 +48,8 @@ internal constructor(private val noteRepository: AppNoteRepository) : ViewModel(
         noteRepository.delete(note)
     }
 
-    fun note(id: Int): Note = noteRepository.note(id)
+    fun note(id: Int) = noteRepository.note(id)
 
-    fun notes(): List<Note> = noteRepository.notes()
+    fun notes() = noteRepository.notes()
 
 }
