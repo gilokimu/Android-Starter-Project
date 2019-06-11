@@ -1,1 +1,1 @@
-include ':app', ':localdataprovider', ':core'
+include ':app', ':cache', ':core'
