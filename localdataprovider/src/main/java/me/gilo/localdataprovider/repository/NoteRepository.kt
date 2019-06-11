@@ -2,6 +2,10 @@ package me.gilo.localdataprovider.repository
 
 
 import android.content.Context
+import android.os.AsyncTask
+import android.os.AsyncTask.execute
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Transformations
 
 import androidx.room.Room
 import me.gilo.core.entity.Note
@@ -11,16 +15,18 @@ import me.gilo.localdataprovider.models.NoteEntity
 import me.gilo.localdataprovider.models.toNote
 import me.gilo.localdataprovider.models.toNoteEntity
 import me.gilo.localdataprovider.tasks.AsyncExecutor
+import me.gilo.localdataprovider.tasks.DeleteNote
+import me.gilo.localdataprovider.tasks.InsertNote
+import me.gilo.localdataprovider.tasks.UpdateNote
 import me.gilo.localdataprovider.utils.AppUtils
-import net.danlew.android.joda.JodaTimeAndroid.init
 
 class RoomNoteRepository: NoteRepository{
 
-    private val DB_NAME = "db_task"
+    private val dbName = "starter_db"
     private val noteDatabase: NoteDatabase
 
     constructor(context: Context) {
-        noteDatabase = Room.databaseBuilder(context, NoteDatabase::class.java, DB_NAME).build()
+        noteDatabase = Room.databaseBuilder(context, NoteDatabase::class.java, dbName).build()
     }
 
     @JvmOverloads
@@ -41,30 +47,29 @@ class RoomNoteRepository: NoteRepository{
     }
 
     override fun add(note: Note) {
-        AsyncExecutor().execute(noteDatabase.daoAccess().insertTask(note.toNoteEntity()))
+        InsertNote(noteDatabase, note).execute()
     }
 
     override fun update(note: Note) {
         note.modifiedAt = AppUtils.currentDateTime
-        AsyncExecutor().execute(noteDatabase.daoAccess().updateTask(note.toNoteEntity()))
+        UpdateNote(noteDatabase, note).execute()
 
-    }
-
-    override fun delete(id: Int) {
-        val task = note(id)
-        AsyncExecutor().execute(noteDatabase.daoAccess().deleteTask(task!!.toNoteEntity()))
     }
 
     override fun delete(note: Note) {
-        AsyncExecutor().execute(noteDatabase.daoAccess().deleteTask(note.toNoteEntity()))
+        DeleteNote(noteDatabase, note).execute()
     }
 
-    override fun note(id: Int): Note? {
-        return noteDatabase.daoAccess().getTask(id).value?.toNote()
+    override fun note(id: Int): LiveData<Note> {
+        return Transformations.map(noteDatabase.daoAccess().getTask(id)){
+            noteEntity: NoteEntity? -> noteEntity?.toNote()
+        }
     }
 
-    override fun notes(): List<Note>? {
-        return noteDatabase.daoAccess().fetchAllTasks().value?.map { noteEntity -> noteEntity.toNote() }
+    override fun notes(): LiveData<List<Note>> {
+        return Transformations.map(noteDatabase.daoAccess().fetchAllTasks()){
+            noteEntities: List<NoteEntity>? ->  noteEntities?.map { noteEntity -> noteEntity.toNote() }
+        }
     }
 }
 

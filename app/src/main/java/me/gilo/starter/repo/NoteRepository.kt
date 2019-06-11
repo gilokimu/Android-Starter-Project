@@ -23,10 +23,6 @@ class AppNoteRepository
         noteRepository.update(note)
     }
 
-    override fun delete(id: Int) {
-        noteRepository.delete(id)
-    }
-
     override fun delete(note: Note) {
         noteRepository.delete(note)
     }

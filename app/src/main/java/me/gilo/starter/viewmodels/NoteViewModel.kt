@@ -40,10 +40,6 @@ internal constructor(private val noteRepository: AppNoteRepository) : ViewModel(
         noteRepository.update(note)
     }
 
-    fun delete(id: Int) {
-        noteRepository.delete(id)
-    }
-
     fun delete(note: Note) {
         noteRepository.delete(note)
     }

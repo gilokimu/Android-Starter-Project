@@ -3,15 +3,11 @@ package me.gilo.starter.ui.note
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil.setContentView
+import androidx.lifecycle.Observer
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
-import me.gilo.starter.R
-
 import kotlinx.android.synthetic.main.activity_add_note.*
 import kotlinx.android.synthetic.main.content_add_note.*
-import me.gilo.localdataprovider.tasks.AsyncExecutor
+import me.gilo.starter.R
 import me.gilo.starter.ui.StarterActivity
 import me.gilo.starter.viewmodels.NoteViewModel
 
@@ -36,13 +32,15 @@ class AddNoteActivity : StarterActivity<NoteViewModel>() {
 
         bAdd.setOnClickListener{addNote()}
 
-       AsyncExecutor().execute(viewModel.notes()?.map { note -> Log.d(note.title, note.description) })
+       viewModel.notes().observe(this, Observer {
+           notes -> notes.map { note -> Log.d(note.title, note.description) }
+       })
 
     }
 
     private fun addNote() {
-        var title = etTitle.text.toString()
-        var description = etDescription.text.toString()
+        val title = etTitle.text.toString()
+        val description = etDescription.text.toString()
 
         viewModel.add(title, description)
 

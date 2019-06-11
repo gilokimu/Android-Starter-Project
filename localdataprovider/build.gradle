@@ -53,6 +53,9 @@ dependencies {
     kapt "androidx.room:room-compiler:2.1.0-rc01"
     androidTestImplementation "androidx.room:room-testing:2.1.0-rc01"
 
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+
 
     // Third-party libraries
     implementation 'net.danlew:android.joda:2.9.9.4'
