@@ -11,13 +11,14 @@ import kotlinx.android.synthetic.main.activity_add_note.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import me.gilo.starter.R
 import me.gilo.starter.ui.note.AddNoteActivity
+import me.gilo.starter.viewmodels.NoteViewModel
 import me.gilo.starter.viewmodels.UserViewModel
 
 
 class HomeFragment : Fragment() {
 
 
-    lateinit var viewModel: UserViewModel
+    lateinit var viewModel: NoteViewModel
     val TAG = "HomeFragment"
 
     override fun onCreate(savedInstanceState: Bundle?) {
